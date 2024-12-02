@@ -12,7 +12,7 @@ vector<vector<int>> get_matrix_from_input() {
     ifstream file("input.txt");
 
     if (!file) {
-        cerr << "Error opening input file day1input.txt!" << endl;
+        cerr << "Error opening input file!" << endl;
         return matrix;
     }
 
