@@ -10,8 +10,7 @@ bool safe_levels(vector<int>& levels) {
         int diff1 = levels[i] - levels[i - 1];
         int diff2 = levels[i + 1] - levels[i];
         bool signChange = (diff1 > 0 && diff2 < 0) || (diff1 < 0 && diff2 > 0);
-        bool notWithinLimits =
-            !diff1 || !diff2 || abs(diff1) > 3 || abs(diff2) > 3;
+        bool notWithinLimits = !diff1 || !diff2 || abs(diff1) > 3 || abs(diff2) > 3;
 
         if (signChange || notWithinLimits) {
             return false;

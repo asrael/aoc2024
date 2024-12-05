@@ -76,30 +76,21 @@ void part2() {
     for (int r = 1; r < rows - 1; r++) {
         for (int c = 1; c < cols - 1; c++) {
             if (chars[r][c] == 'A') {
-                if (valid(r - 1, c - 1, rows, cols) &&
-                    valid(r + 1, c + 1, rows, cols)) {
-                    if (chars[r - 1][c - 1] == 'M' &&
-                        chars[r - 1][c + 1] == 'M' &&
-                        chars[r + 1][c + 1] == 'S' &&
-                        chars[r + 1][c - 1] == 'S') {
+                if (valid(r - 1, c - 1, rows, cols) && valid(r + 1, c + 1, rows, cols)) {
+                    if (chars[r - 1][c - 1] == 'M' && chars[r - 1][c + 1] == 'M' &&
+                        chars[r + 1][c + 1] == 'S' && chars[r + 1][c - 1] == 'S') {
                         count++;
                     }
-                    if (chars[r - 1][c - 1] == 'S' &&
-                        chars[r - 1][c + 1] == 'S' &&
-                        chars[r + 1][c + 1] == 'M' &&
-                        chars[r + 1][c - 1] == 'M') {
+                    if (chars[r - 1][c - 1] == 'S' && chars[r - 1][c + 1] == 'S' &&
+                        chars[r + 1][c + 1] == 'M' && chars[r + 1][c - 1] == 'M') {
                         count++;
                     }
-                    if (chars[r - 1][c - 1] == 'S' &&
-                        chars[r + 1][c - 1] == 'S' &&
-                        chars[r - 1][c + 1] == 'M' &&
-                        chars[r + 1][c + 1] == 'M') {
+                    if (chars[r - 1][c - 1] == 'S' && chars[r + 1][c - 1] == 'S' &&
+                        chars[r - 1][c + 1] == 'M' && chars[r + 1][c + 1] == 'M') {
                         count++;
                     }
-                    if (chars[r - 1][c - 1] == 'M' &&
-                        chars[r + 1][c - 1] == 'M' &&
-                        chars[r - 1][c + 1] == 'S' &&
-                        chars[r + 1][c + 1] == 'S') {
+                    if (chars[r - 1][c - 1] == 'M' && chars[r + 1][c - 1] == 'M' &&
+                        chars[r - 1][c + 1] == 'S' && chars[r + 1][c + 1] == 'S') {
                         count++;
                     }
                 }
